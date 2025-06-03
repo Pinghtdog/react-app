@@ -1,6 +1,15 @@
 import { Fragment } from "react/jsx-runtime";
 function ListGroup() {
-  const items = ["Nigga1", "Nigga2", "Nigga3", "Nigga4"];
+  let items = ["Nigga1", "Nigga2", "Nigga3", "Nigga4"];
+  items = [];
+  if (items.length == 0) {
+    return (
+      <>
+        <h1>Hello Bichaess</h1>
+        <p>No Items Found</p>
+      </>
+    );
+  }
 
   return (
     <>
