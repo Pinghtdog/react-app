@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { Fragment } from "react/jsx-runtime";
-function ListGroup() {
-  let items = ["Nigga1", "Nigga2", "Nigga3", "Nigga4"];
-  // items = [];
+
+interface Props {
+  items: string[];
+  heading: string;
+}
+
+function ListGroup({ items, heading }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>
-      <h1>List</h1>
+      <h1>{heading}</h1>
       {/* {items.length == 0 ? <p>No Item found </p> : null} */}
       {items.length == 0 && <p>No Item Found</p>}
       <ul className="list-group">
